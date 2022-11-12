@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #3DB2FF;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  margin: 5px auto;
+}
+
+.container {
+  width: 350px;
+  margin: auto;
+  border: 3px solid #333333;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;  
+  position: relative;  
+}
+
+.container::before {
+  content: '';
+  width: 150px;
+  height: 84px;
+  background-image: url('../public/img/umbrella.png');
+  background-size: cover;
+  position: absolute;
+  transform: rotate(-20deg);
+  left: -60px;
+  top: -60px;
+}
+ .container::after {
+  content: '';
+  width: 150px;
+  height: 150px;
+  background-image: url('../public/img/puddle-nature.png');
+  background-size: cover;
+  position: absolute;
+  right: -50px;
+  bottom: -110px;    
+}
+form {
+  width: 100%;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.formControl {
+  width: 100%;
+  outline: none;
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+}
+
+.searchButton {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 7px;
+  color: #ffffff;
+  background: #FF4181;
+  border: 1px solid #FF4181;
+  border-radius: 0 5px 5px 0;
+}
+
+.searchButton:hover {
+  background: #FF6E54;
+  border: 1px solid #FF6E54;
+}
+
+.searchButton:active {
+  background: #FFCE47;
+  border: 1px solid #FFCE47;
+}
+
+.dailyWeather {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.weatherIcon {
+  width: 50px;
+  height: 50px;
+}
+
+#temperature {
+  font-size: 44px;
+  
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.units {
+  font-size: 14px; 
+  position: relative;
+  top: -20px; 
+}
+
+.units button {
+  border: none;
+  background: transparent;
+}
+
+#description {
+  text-align: center;
+  font-size: 14px;
+  font-style: italic;
+}
+
+#description::first-letter {
+  text-transform: capitalize;
+}
+
+.city {
+  font-weight: 400;
+  text-align: center;
+}
+
+#date {
+  font-style: italic;
+  text-align: center;
+}
+
+.details {
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.detailsIcon {
+  margin-right: 8px;
+  color: #757575;
+}
