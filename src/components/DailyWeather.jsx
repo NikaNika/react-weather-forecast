@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faArrowDown,
 	faDroplet,
-	faTemperatureHalf,
 	faWind,
+	// faTemperatureHalf,
 } from '@fortawesome/free-solid-svg-icons';
 import WeatherTemperature from "./WeatherTemperature";
 
