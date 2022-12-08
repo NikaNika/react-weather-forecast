@@ -17,8 +17,8 @@ function App() {
 	// const [lat, setLat] = useState(0);
 	// const [lon, setLon] = useState(0);
 
-	const formatDate = (timestamp) => {
-		let date = new Date(timestamp);
+	const formatDate = () => {
+		let date = new Date();		
 		let hours = date.getHours();
 		if (hours < 10) {
 			hours = `0${hours}`;
@@ -38,7 +38,7 @@ function App() {
 			'Saturday',
 		];
 		let day = days[date.getDay()];
-		return `${day} ${hours}:${minutes}`;
+		return `${day} ${hours}:${minutes}`;		
 	};
 
 	const onChangeCity = (value) => {
@@ -48,7 +48,7 @@ function App() {
 	// 451ebd191aa070edb6802ed47f595d5d
 	// 445905dadb3d2b0c6f1b916c9d0e3860
 
-	let apiKey = '451ebd191aa070edb6802ed47f595d5d';
+	let apiKey = '445905dadb3d2b0c6f1b916c9d0e3860';
 	let units = 'metric';
 	let apiUrlDailyWeather = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 	// let apiUrlForecast = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
@@ -61,7 +61,7 @@ function App() {
 		setWind(Math.round(resp.data.wind.speed));
 		setDescription(resp.data.weather[0].description);
 		setIconCode(resp.data.weather[0].icon);
-		setDate(formatDate(resp.data.dt));
+		setDate(formatDate());		
 		// setLat(resp.data.coord.lat);
 		// setLon(resp.data.coord.lon);
 	}).catch((err) => {
