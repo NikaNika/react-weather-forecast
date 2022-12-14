@@ -1,0 +1,133 @@
+.Weather {
+  font-family: arial, sans-serif;
+  border: 1px solid #dadde1;
+  padding: 16px;
+  border-radius: 4px;
+  color: rgb(135, 135, 135);
+  position: relative;
+  margin-top: 100px;
+}
+
+.Weather::before {
+  content: '';
+  background-image: url(../public/img/umbrella.png);
+  background-size: cover;
+  position: absolute;
+  left: -60px;
+  top: -100px;
+  width: 200px;
+  height: 120px;
+  transform: rotate(-15deg);
+}
+
+.Weather::after {
+  content: '';
+  background-image: url(../public/img/puddle-nature.png);
+  background-size: cover;
+  position: absolute;
+  right: -10px;
+  bottom: -160px;
+  width: 200px;
+  height: 200px;
+}
+
+.Weather h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 20px 0 0 0;
+  line-height: 29px;
+  text-align: center;
+  color: rgb(33, 33, 33);
+}
+
+.currentDate {
+  text-align: center;
+}
+
+.description::first-letter {
+  text-transform: uppercase;
+}
+
+.search {
+  position: relative;  
+}
+
+.search input:focus {  
+  box-shadow: none;
+}
+
+.searchButton {
+  position: absolute;
+  top: 0;
+  right: 10px;  
+  background-color: #ff4181;
+  color: white;
+}
+
+.searchButton:hover {
+  background-color: #3DB2FF;
+  color: white;
+}
+
+.Weather ul {
+  margin: 0;
+  padding: 0;
+}
+
+.Weather li {
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+  list-style: none;
+}
+
+.Weather .temperature {
+  font-weight: bold;
+  color: rgb(33, 33, 33);
+  font-size: 64px;
+  line-height: 64px;
+  margin-left: 5px;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.Weather canvas {
+  margin: 10px auto;
+}
+
+.Weather .unit {
+  color: rgb(33, 33, 33);
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  line-height: 1;
+  top: -34px;
+  cursor: pointer;
+}
+
+.unit.active {
+  color: #ff4181;
+}
+
+@media screen and (max-width: 600px) {
+  .Weather {
+    margin-top: 0;
+  }
+
+  .Weather::before,
+  .Weather::after {
+    display: none;
+  }
+
+  .Weather li {
+    font-size: 14px;
+  }
+
+  .Weather .temperature {
+    font-size: 44px;
+  }
+
+  .Weather canvas {
+    width: 32px;
+  }
+}
